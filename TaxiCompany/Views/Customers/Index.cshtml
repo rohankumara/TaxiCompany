@@ -1,13 +1,13 @@
 ﻿@model PaginatedList<TaxiCompany.Models.Customer>
 @using TaxiCompany.Authorization;
-
-<h1></h1>
-<h1></h1>
-<h1></h1>
+@using TaxiCompany.Models;
 
 @{
     ViewData["Title"] = "Index";
 }
+
+<br />
+<br />
 
 <h2>List of customers</h2>
 
@@ -61,46 +61,46 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lastname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Firstname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Career)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Officeaddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @if ((await AuthorizationService.AuthorizeAsync(User, item, TaxiCompanyOperations.Update)).Succeeded)
-                {
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
-                    <text> | </text>
-                }
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Career)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Officeaddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, item, TaxiCompanyOperations.Update)).Succeeded)
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                        <text> | </text>
+                    }
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
 
-                @if ((await AuthorizationService.AuthorizeAsync(User, item, TaxiCompanyOperations.Delete)).Succeeded)
-                {
-                    <text> | </text>
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                }
-            </td>
-        </tr>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, item, TaxiCompanyOperations.Delete)).Succeeded)
+                    {
+                        <text> | </text>
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    }
+                </td>
+            </tr>
         }
     </tbody>
 </table>

@@ -10,3 +10,15 @@ E:\Github\Mini Project\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompa
 E:\Github\Mini Project\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.AssemblyInfo.cs
 E:\Github\Mini Project\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.dll
 E:\Github\Mini Project\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.pdb
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\bin\Debug\netcoreapp2.0\TaxiCompany.deps.json
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\bin\Debug\netcoreapp2.0\TaxiCompany.runtimeconfig.json
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\bin\Debug\netcoreapp2.0\TaxiCompany.runtimeconfig.dev.json
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\bin\Debug\netcoreapp2.0\TaxiCompany.dll
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\bin\Debug\netcoreapp2.0\TaxiCompany.pdb
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.csprojAssemblyReference.cache
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.csproj.CoreCompileInputs.cache
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.AssemblyInfoInputs.cache
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.AssemblyInfo.cs
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.dll
+E:\Github\MiniProject\MiniProjectWebApp\TaxiCompany\TaxiCompany\obj\Debug\netcoreapp2.0\TaxiCompany.pdb

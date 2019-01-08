@@ -21,6 +21,6 @@ namespace TaxiCompany.Models
         public string Contactnumber { get; set; }
 
         public ICollection<Driver> Drivers { get; set; }
-        public ICollection<Branch> Branches { get; set; }
+        public ICollection<Customer> Customers { get; set; }
     }
 }

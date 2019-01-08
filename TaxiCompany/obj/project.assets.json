@@ -13266,11 +13266,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\Mini Project\\TaxiCompany\\TaxiCompany\\TaxiCompany.csproj",
+      "projectUniqueName": "E:\\Github\\MiniProject\\MiniProjectWebApp\\TaxiCompany\\TaxiCompany\\TaxiCompany.csproj",
       "projectName": "TaxiCompany",
-      "projectPath": "E:\\Github\\Mini Project\\TaxiCompany\\TaxiCompany\\TaxiCompany.csproj",
+      "projectPath": "E:\\Github\\MiniProject\\MiniProjectWebApp\\TaxiCompany\\TaxiCompany\\TaxiCompany.csproj",
       "packagesPath": "C:\\Users\\pasan\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\Mini Project\\TaxiCompany\\TaxiCompany\\obj\\",
+      "outputPath": "E:\\Github\\MiniProject\\MiniProjectWebApp\\TaxiCompany\\TaxiCompany\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
