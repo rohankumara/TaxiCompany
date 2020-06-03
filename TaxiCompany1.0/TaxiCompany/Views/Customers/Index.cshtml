@@ -1,0 +1,124 @@
+﻿@model PaginatedList<TaxiCompany.Models.Customer>
+@using TaxiCompany.Authorization;
+@using TaxiCompany.Models;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<br />
+
+<h2>List of customers</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by Name : <input type="text" name="searchString" value="@ViewData["currentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <a asp-action="Index">Back to Full list</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index" asp-route-sortOder="@ViewData["NameSortParm"]"
+                   asp-route-curretFilter="@ViewData["currentFilter"]">
+                    LastName
+                </a>
+            </th>
+            <th>
+                Firstname
+            </th>
+            <th>
+                Career
+            </th>
+            <th>
+                gender
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Officeaddress
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Career)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Officeaddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, item, TaxiCompanyOperations.Update)).Succeeded)
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                        <text> | </text>
+                    }
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+
+                    @if ((await AuthorizationService.AuthorizeAsync(User, item, TaxiCompanyOperations.Delete)).Succeeded)
+                    {
+                        <text> | </text>
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+    var preDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index" asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-page="@(Model.PageIndex-1)"
+   asp-route-currentFilter="@ViewData["currentFilter"]"
+   class="btn btn-default @preDisabled">
+    Previous
+</a>
+
+<a asp-action="Index" asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-page="@(Model.PageIndex+1)"
+   asp-route-currentFilter="@ViewData["currentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
